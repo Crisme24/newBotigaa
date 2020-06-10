@@ -40,14 +40,14 @@ const Product = (props) => {
                     <li>
                     Price: <b> {product.price} EUR</b>
                     </li>
-                    <li>{product.size}</li>
+                    {/* <li>{product.size}</li> */}
                     <li>Description: {product.description}</li>
                 </ul>
             </div>
             <div className="details-action">
                 <ul>
                     <li>
-                        Price: {product.price}
+                        Price: {product.price} EUR
                     </li>
                     <li>
                   Status: {product.stock > 0 ? "In Stock" : "Unavailable."}
