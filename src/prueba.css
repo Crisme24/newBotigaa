@@ -1,17 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 html{
-  font-size: 50.5%; /* 16px * 62.5 = 10px = 1rem */
+  font-size: 52.5%; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
 body{
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
-  background: white;
 }
 button{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .full-width {
   width: 100%;
@@ -31,12 +29,12 @@ button{
 }
 .header{
   grid-area: header;
-  background-color: black;
+  background-color: #203040;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.1rem;
+  padding: 0.5rem;
 }
 .brand a{
   color: #ffffff;
@@ -45,21 +43,20 @@ button{
   text-decoration: none;
 }
 .header-links a{
-  color:#ffffff !important;
+  color:#ffffff;
   text-decoration: none;
-  padding: 2rem;
-
+  padding: 1rem;
 
 }
 .header-links a:hover{
-  color: black;
+  color:#ff8000;
 }
 .main{
   grid-area: main;
 }
 .footer{
   grid-area: footer;
-  background-color: black;
+  background-color: #203040;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -69,8 +66,7 @@ a{
   text-decoration: none;
 }
 a:hover{
-  color:black;
-  opacity: 30%;
+  color:#ff8000
 }
 /* Home Screen */
 .products {
@@ -95,8 +91,7 @@ a:hover{
 }
 .product-name{
   font-size: 2rem;
-
-  color: #000000 !important;
+  font-weight: bold;
 }
 .product-brand{
   font-size: 1.2rem;
@@ -104,7 +99,7 @@ a:hover{
 }
 .product-price{
   font-size: 2rem;
-  
+  font-weight: bold;
 }
 .product-image{
   max-width: 34rem;
@@ -155,20 +150,20 @@ a:hover{
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 4rem;
+  padding: 1rem;
 }
 .details-image {
-  flex: 0.2 1 40rem;
+  flex: 2 1 60rem;
 }
 .details-image img{
-  max-width: 40rem;
+  max-width: 60rem;
   width: 100%;
 }
 .details-info {
   flex: 1 1 30rem;
 }
 .details-action {
-  flex: 0.3 1 30rem;
+  flex: 1 1 30rem;
 }
 
 .details-info ul, .details-action ul{
@@ -196,22 +191,14 @@ a:hover{
   border: .1rem #808080 solid;
   border-radius: 0.5rem;
   cursor: pointer;
-  margin: 7px;
 }
 .button:hover{
 
   border: .1rem #404040 solid;
 }
 .button.primary{
-  background-color: #404040;
-  color: white;
+  background-color: #f0c040;
 }
-
-.button.primary:hover{
-  background-color: #f0f0f0;
-  color: black;
-}
-
 .button.secondary{
   background-color: #f0f0f0;
 }
@@ -230,7 +217,7 @@ a:hover{
   flex: 3 1 60rem;
 }
 .cart-action{
-  flex:2 1 10rem;
+  flex:1 1 20rem;
   background-color: #f0f0f0; 
   border-radius: .5rem;
   padding: 1rem;
@@ -266,7 +253,7 @@ align-items: flex-end;
 }
 .cart-price{
   flex: 1 1;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-align: right;
 }
 
@@ -303,7 +290,6 @@ input{
 /* Products */
 
 .product-header{
-  margin-top: 3%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -413,13 +399,12 @@ tbody>tr:nth-child(odd){
   position: absolute;
   display: none;
   right:0;
-  padding: 0.8rem;
+  padding: 1rem;
   list-style-type: none;
   z-index: 1;
-  background-color: black;
-  opacity: 900%;
-  margin:0.2px;
-  margin-top:1.6rem;
+  background-color: #203040;
+  margin:0;
+  margin-top:0.4rem;
 }
 .dropdown:hover .dropdown-content{
   display: block;
@@ -457,32 +442,4 @@ tbody>tr:nth-child(odd){
 
 .categories a:hover{
   background-color: #c0c0c0;
-}
-
-.button.primary.black{
-  background-color: black;
-  border-color: black;
-  color: #fff;
-  opacity: 80%;
-  text-align: center;
-}
-.button.primary.black:hover{
-  background-color: white;
-  color: #000000;
-}
-
-.button.primary.white{
-  background-color: white;
-  border-color: black;
-  color: black;
-  opacity: 80%;
-  text-align: center;
-}
-.button.primary.white:hover{
-  background-color: black;
-  color: white;
-}
-
-h2{
-  text-align: center;
 }

@@ -12,7 +12,7 @@ function Cart (props)  {
     const {cartItems} = cart;
 
     const productId = props.match.params.id;
-    const qty = props.location.search? Number(props.location.search.split('=') [1] ) : 1;
+    const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
     const dispatch = useDispatch();
 
     const removeFromCartHandler = (productId) => {
@@ -24,10 +24,11 @@ function Cart (props)  {
     }
 
     useEffect(() => {
-        if(productId) {
-            dispatch(addToCart(productId, qty));
+        if (productId) {
+          dispatch(addToCart(productId, qty));
         }
-    }, []);
+      }, []);
+      
     return (
         <div className="cart">
             <div className="cart-list">
@@ -42,7 +43,7 @@ function Cart (props)  {
                     </div>
                     :
                     cartItems.map(item => 
-                        <li>
+                        <li key={item.id}>
                     <div className="cart-image">
                         <img src={item.image_path} alt="product"/></div>
                         <div className="cart-name">
@@ -54,10 +55,10 @@ function Cart (props)  {
                         <div>
                             Qty:
                             <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
+                      {[...Array(item.stock).keys()].map(x =>
+                        <option key={x + 1} value={x + 1}>{x + 1}</option>
+                      )}
+                    </select>
                             <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)}>
                                 Delete
                             </button>

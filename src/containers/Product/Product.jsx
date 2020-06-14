@@ -52,13 +52,13 @@ const Product = (props) => {
                     <li>
                   Status: {product.stock > 0 ? "In Stock" : "Unavailable."}
                 </li>
-                    <li>
-                    Qty: <select value={qty} onChange={(e) => { setQty(e.target.value) }}>
-                    {[...Array(product?.stock).keys()].map(x =>
+                <li>
+                  Qty: <select value={qty} onChange={(e) => { setQty(e.target.value) }}>
+                    {[...Array(product.stock).keys()].map(x =>
                       <option key={x + 1} value={x + 1}>{x + 1}</option>
                     )}
                   </select>
-                    </li>
+                </li>
                     <li>
                         {product.stock > 0 && <button onClick={handleAddToCart} className="button primary">Add To Cart</button>}
                     </li>

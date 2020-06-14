@@ -8,3 +8,4 @@ if(window.location.href.includes('localhost')){
 
 export const API_URL = BASE_URL + '/api/v1';
 export const IMG_URL = BASE_URL + '/images';
+export const API_URL2 = 'http://localhost:5000';
